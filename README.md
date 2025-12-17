@@ -1,6 +1,7 @@
-# CiliaThor <img src="CiliaThor_logo.png" alt="Logo" width="200" />
-3D Cilia Segmentation tool.
-
+# CiliaThor
+<img src="CiliaThor_logo.png" alt="Logo" width="100" style="float:right;" />
+---
+*A GUI application for automated 3D cilia segmentation and measurement from TIFF images.*
 > [!CAUTION]
 > The current version uses embedded metadata for size calculation.
 > This GUI is still in development, so measurements and calculations need to be double-checked.
