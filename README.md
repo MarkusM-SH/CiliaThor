@@ -19,6 +19,7 @@ git clone https://github.com/MarkusM-SH/CiliaThor.git
 pip install pyinstaller
 cd path\to\the\CiliaThor_v2.0.py
 pyinstaller --onefile --windowed --add-data "CiliaThor_logo.png:." CiliaThor_v2.0.py
+mv CiliaThor_logo.png dist/CiliaThor_logo.png
 ```
 
 ## Usage
