@@ -2,7 +2,8 @@
 3D Cilia Segmentation tool.
 
 > [!CAUTION]
-> In the current version, imbedded metadata for size calculation is used. This GUI is still in development and measurment/calculation need to be double checked.
+> The current version uses embedded metadata for size calculation.
+> This GUI is still in development, so measurements and calculations need to be double-checked.
 
 # Building and using as an executable
 To convert multiple images without Python experience, you can create a small executable. 
@@ -25,7 +26,8 @@ pyinstaller --onefile --windowed --add-data "CiliaThor_logo.png:." CiliaThor_v2.
 - **Select TIFF Files** -> Multiple tiff files can be loaded simultaneously
 - **Select Output Folder** -> Select the folder to save output files
 - **Parameters** -> Adapt the Parameters
-> [!CAUTION] The Cilia Channel is the position starting at index 0. (For example first channel is DAPI, second Channel are Cilia -> Cilia Channel = 1)
+> [!CAUTION] The Cilia Channel is the position starting at index 0.
+> For example, the first channel is DAPI and the second channel is Cilia, so the Cilia Channel is 1.
 - **Output Files** -> Choose which file types should be saved.
 - Click **Start Analysis**
 
