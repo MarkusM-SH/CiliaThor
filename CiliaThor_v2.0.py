@@ -377,12 +377,12 @@ class CiliaAnalyzer:
                 tifffile.imwrite(str(preprocessed_path), cilia_smooth.astype(np.float32))
 
             if output_options.get('segmentation', True):
-                seg_path = output_dir / f"{base_name}_ridge_segmentation.tif"
+                seg_path = output_dir / f"{base_name}_binary_mask.tif"
                 print(f"Saving segmentation TIFF: {seg_path.name}")
                 tifffile.imwrite(str(seg_path), seg_ridges.astype(np.uint8))
 
             if output_options.get('labeled', True):
-                labeled_path = output_dir / f"{base_name}_ridge_labeled.tif"
+                labeled_path = output_dir / f"{base_name}_annotation_mask.tif"
                 print(f"Saving labeled TIFF: {labeled_path.name}")
                 tifffile.imwrite(str(labeled_path), labeled_filtered.astype(np.uint16))
 
@@ -508,8 +508,8 @@ class CiliaAnalyzerGUI:
 
         ttk.Checkbutton(output_grid, text="CSV (measurements)", variable=self.output_options['csv']).grid(row=0, column=0, sticky=tk.W, padx=5, pady=2)
         ttk.Checkbutton(output_grid, text="Preprocessed TIFF", variable=self.output_options['preprocessed']).grid(row=0, column=1, sticky=tk.W, padx=5, pady=2)
-        ttk.Checkbutton(output_grid, text="Labeled TIFF", variable=self.output_options['labeled']).grid(row=1, column=0, sticky=tk.W, padx=5, pady=2)
-        ttk.Checkbutton(output_grid, text="Segmentation TIFF", variable=self.output_options['segmentation']).grid(row=1, column=1, sticky=tk.W, padx=5, pady=2)
+        ttk.Checkbutton(output_grid, text="Annotation Masek", variable=self.output_options['labeled']).grid(row=1, column=0, sticky=tk.W, padx=5, pady=2)
+        ttk.Checkbutton(output_grid, text="Binary Segmentation Mask", variable=self.output_options['segmentation']).grid(row=1, column=1, sticky=tk.W, padx=5, pady=2)
 
         self.run_button = ttk.Button(main_frame, text="▶ Start Analysis", command=self.start_processing, style='Accent.TButton')
         self.run_button.grid(row=5, column=0, sticky=(tk.W, tk.E), pady=(0, 10))
