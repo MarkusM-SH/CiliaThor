@@ -1,4 +1,5 @@
-![Logo](CiliaThor_logo.png) # CiliaThor
+<img src="CiliaThor_logo.png" alt="Logo" width="200" />
+#CiliaThor
 3D Cilia Segmentation tool.
 
 > [!CAUTION]
